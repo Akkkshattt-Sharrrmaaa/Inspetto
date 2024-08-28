@@ -26,7 +26,7 @@ function Prediction() {
             const formData = new FormData();
             formData.append('image', uploadedImage);
 
-            const response = await axios.post('http://127.0.0.1:5000/predict', formData, {
+            const response = await axios.post('https://inspetto.onrender.com/predict', formData, {
                 headers : {
                     'Content-Type': 'multipart/form-data',
                 }
