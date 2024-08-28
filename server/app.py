@@ -9,7 +9,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-model_path = "/Users/akshatsharma/Developer/IBM/Project/inspetto/server/VGG model.h5"
+model_path = os.path.join(os.path.dirname(__file__), 'VGG model.h5')
 
 
 def load_model(model_path):
