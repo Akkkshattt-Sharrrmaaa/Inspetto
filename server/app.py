@@ -7,7 +7,7 @@ from PIL import Image
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://inspetto.vercel.app"}})
 
 model_path = os.path.join(os.path.dirname(__file__), 'VGG model.h5')
 
